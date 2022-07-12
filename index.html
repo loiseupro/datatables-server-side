@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Datatable - Server example</title>
+
+	<!-- External links -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#example').DataTable({
+				processing: true,
+				serverSide: true,
+				ajax: 'server/getData.php',
+			});
+		});
+	</script>
+	
+</head>
+<body>
+
+	<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Value</th>                
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Value</th>  
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
